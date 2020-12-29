@@ -1,25 +1,15 @@
 import * as React from 'react';
-import { useState } from "react";
 import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
-import HomeScreen from "./HomeScreen";
-import AnswerScreen from "./AnswerScreen";
 
 export default function TabOneScreen() {
-  const [inAnswer, setInAnswer] = useState(false);
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-      {inAnswer ? (
-        <AnswerScreen setInAnswer={setInAnswer}/>
-      ) : (
-        <HomeScreen setInAnswer={setInAnswer}/>
-      )}
     </View>
   );
 }
