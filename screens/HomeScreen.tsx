@@ -1,7 +1,7 @@
 import React from "react";
 import { Alert, Button, View, StyleSheet, Text, TextInput } from "react-native";
 
-const HomeScreen = ({ setInAnswer }) => {
+const HomeScreen = ({ setInAnswer, setQuestion }) => {
   const [value, onChangeText] = React.useState("");
 
   return (
@@ -19,9 +19,8 @@ const HomeScreen = ({ setInAnswer }) => {
         <Button
           onPress={() => {
             if (value) {
-              setInAnswer(true);
+             { setInAnswer(true); setQuestion(value)}
             } else {
-              /* https://reactnative.dev/docs/alert */
               Alert.alert(
                 'Etwas fehlt!',
                 'Bitte die Frage ins Textfeld eingeben',

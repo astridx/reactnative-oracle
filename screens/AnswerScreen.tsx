@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Button, View, StyleSheet, Text, TextInput } from "react-native";
 import { initAnswers } from "../src/utils/answer-supplier";
 
-const AnswerScreen = ({ setInAnswer }) => {
+const AnswerScreen = ({ setInAnswer, question }) => {
   useEffect(() => {
     let answer = initAnswers()[0].title;
   }, []);
@@ -10,7 +10,7 @@ const AnswerScreen = ({ setInAnswer }) => {
   return (
     <>
       <View style={styles.container}>
-        <Text style={styles.answer1}>Die Antwort lautet:</Text>
+        <Text style={styles.answer1}>{question}</Text>
         <Text style={styles.answer2}>{initAnswers()[0].title}</Text>
         <Button
           onPress={() => {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   answer1: {
   },
   answer2: {
-    borderBottomWidth: 1,
+    fontWeight:'bold',
     margin: 25,
   },
 });
