@@ -25,7 +25,7 @@ const HomeScreen = ({ setInAnswer }) => {
                 'Etwas fehlt!',
                 'Bitte die Frage ins Textfeld eingeben',
                 [
-                  { text: 'OK', onPress: () => console.log('OK Pressed') }
+                  { text: 'OK' }
                 ],
               );
 
