@@ -17,9 +17,9 @@ const AnswerScreen = ({ setInAnswer }) => {
           onPress={() => {
             setInAnswer(false);
           }}
-          title="Zurück zur Frageseite"
+          title="Zurück zum Orakel"
           color="#841584"
-          accessibilityLabel="Zurück zur Frageseite"
+          accessibilityLabel="Zurück zum Orakel"
         />
       </View>
     </>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, View, StyleSheet, Text, TextInput } from "react-native";
+import { Alert, Button, View, StyleSheet, Text, TextInput } from "react-native";
 
 const HomeScreen = ({ setInAnswer }) => {
   const [value, onChangeText] = React.useState("");
@@ -17,11 +17,23 @@ const HomeScreen = ({ setInAnswer }) => {
         />
         <Button
           onPress={() => {
-            setInAnswer(true);
+            if (value) {
+              setInAnswer(true);
+            } else {
+              /* https://reactnative.dev/docs/alert */
+              Alert.alert(
+                'Etwas fehlt!',
+                'Bitte die Frage ins Textfeld eingeben',
+                [
+                  { text: 'OK', onPress: () => console.log('OK Pressed') }
+                ],
+              );
+
+            }
           }}
-          title="Wie ist die Antwort auf diese Frage?"
+          title="Zeige mir die Antwort!"
           color="#841584"
-          accessibilityLabel="Wie ist die Antwort auf diese Frage?"
+          accessibilityLabel="Zeige mir die Antwort!"
         />
       </View>
     </>
