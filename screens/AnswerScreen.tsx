@@ -5,7 +5,6 @@ import { initAnswers } from "../src/utils/answer-supplier";
 const AnswerScreen = ({ setInAnswer }) => {
   useEffect(() => {
     let answer = initAnswers()[0].title;
-    console.log(answer);
   }, []);
 
   return (
