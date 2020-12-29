@@ -10,8 +10,8 @@ const AnswerScreen = ({ setInAnswer }) => {
   return (
     <>
       <View style={styles.container}>
-        <Text>Die Antwort lautet:</Text>
-        <Text>{initAnswers()[0].title}</Text>
+        <Text style={styles.answer1}>Die Antwort lautet:</Text>
+        <Text style={styles.answer2}>{initAnswers()[0].title}</Text>
         <Button
           onPress={() => {
             setInAnswer(false);
@@ -31,6 +31,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  answer1: {
+  },
+  answer2: {
+    borderBottomWidth: 1,
+    margin: 25,
   },
 });
 

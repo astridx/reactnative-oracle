@@ -11,8 +11,9 @@ const HomeScreen = ({ setInAnswer }) => {
         <TextInput
           multiline
           autoFocus
-          numberOfLines={4}
+          numberOfLines={1}
           onChangeText={(text) => onChangeText(text)}
+          style={styles.textinput}
           value={value}
         />
         <Button
@@ -46,6 +47,10 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  textinput: {
+    borderBottomWidth: 1,
+    margin: 25,
   },
 });
 
